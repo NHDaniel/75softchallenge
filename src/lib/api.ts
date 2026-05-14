@@ -8,7 +8,11 @@ export const API_BASE =
 async function req<T>(path: string, init?: RequestInit): Promise<T> {
   const res = await fetch(`${API_BASE}${path}`, {
     ...init,
-    headers: { "Content-Type": "application/json", ...(init?.headers || {}) },
+    headers: { 
+      "Content-Type": "application/json",
+      "ngrok-skip-browser-warning": "true",
+      ...(init?.headers || {}) 
+    },
     cache: "no-store"
   });
   if (!res.ok) throw new Error(`${res.status} ${res.statusText}`);
