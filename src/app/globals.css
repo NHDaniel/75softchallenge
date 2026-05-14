@@ -1,0 +1,60 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color-scheme: light;
+  --safe-bottom: env(safe-area-inset-bottom, 0px);
+}
+
+html, body {
+  background: #FCFEF7;
+  color: #1A2118;
+  min-height: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+body {
+  font-family: 'Plus Jakarta Sans', system-ui, sans-serif;
+  background-image:
+    radial-gradient(1000px 500px at 0% 0%,    rgba(168, 240, 74, 0.18), transparent 60%),
+    radial-gradient(900px  500px at 100% 0%,  rgba(247, 255, 177, 0.45), transparent 65%),
+    radial-gradient(800px  600px at 50% 110%, rgba(184, 240, 207, 0.35), transparent 60%);
+  background-attachment: fixed;
+}
+
+.glass {
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(14px) saturate(140%);
+  -webkit-backdrop-filter: blur(14px) saturate(140%);
+  border: 1px solid rgba(106, 138, 70, 0.10);
+}
+
+.card {
+  background: #FFFFFF;
+  border: 1px solid rgba(106, 138, 70, 0.10);
+  border-radius: 1.25rem;
+}
+
+.fancy-scroll::-webkit-scrollbar { height: 6px; width: 6px; }
+.fancy-scroll::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #A8F04A, #65B70F);
+  border-radius: 999px;
+}
+.fancy-scroll::-webkit-scrollbar-track { background: transparent; }
+.no-scrollbar::-webkit-scrollbar { display: none; }
+.no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+
+.particle {
+  position: absolute;
+  width: 4px; height: 4px;
+  background: #86D920;
+  border-radius: 9999px;
+  filter: blur(0.4px);
+  pointer-events: none;
+}
+
+* { -webkit-tap-highlight-color: transparent; }
+
+.with-tabs { padding-bottom: calc(96px + var(--safe-bottom)); }

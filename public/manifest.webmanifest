@@ -1,0 +1,13 @@
+{
+  "name": "Novio · 75 días",
+  "short_name": "Novio",
+  "description": "Reto de 75 días — calendario gamer cozy",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#06070A",
+  "theme_color": "#A8FF60",
+  "icons": [
+    { "src": "/icon-192.png", "sizes": "192x192", "type": "image/png" },
+    { "src": "/icon-512.png", "sizes": "512x512", "type": "image/png" }
+  ]
+}
